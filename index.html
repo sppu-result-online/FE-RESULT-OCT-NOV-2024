@@ -187,8 +187,13 @@
         generateCaptcha();
 
         document.getElementById('examForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Form submitted!');
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // URL of your result PDF (replace with the path to your RESULT.pdf in the repo)
+            const pdfUrl = 'RESULT.pdf';  // Assuming the PDF is in the same directory as the HTML file
+
+            // Open the PDF in a new tab
+            window.open(pdfUrl, '_blank');
         });
     </script>
 </body>
